@@ -9,7 +9,7 @@ This project is a web application built with Laravel for the backend and React.j
 1. Clone the repository:
 
     ```
-    git clone https://github.com/D-Binara/PHP-Web-Project
+    git clone https://github.com/D-Binara/PHP-Web-Project.git
     ```
 
 2. Navigate to the backend directory:
