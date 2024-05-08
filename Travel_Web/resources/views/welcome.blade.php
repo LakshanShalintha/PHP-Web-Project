@@ -9,17 +9,17 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset('images/sigiriya.png') }}" alt="First slide">
+                <img class="d-block w-100" src="{{ asset('images/sigiriya_dark.png') }}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Slider One Item</h5>
+                    <h5>Welcome to The Sri Lanka</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi
                         quas vero.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('images/sigiriya.png') }}" alt="Second slide">
+                <img class="d-block w-100" src="{{ asset('images/sigiriya_dark.png') }}" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Slider One Item</h5>
+                    <h5>Welcome to The Sri Lanka</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi
                         quas vero.</p>
                 </div>
