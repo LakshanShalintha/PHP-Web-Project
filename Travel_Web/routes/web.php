@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,8 +25,7 @@ Route::get('/aboutUs', [App\Http\Controllers\AboutUsController::class, 'aboutUsV
 Route::get('/contactus', [App\Http\Controllers\ContactUsController::class, 'contactusView'])->name('contactus');
 
 
-Route::get('admin_area', ['middleware' => 'admin', function () {
+Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'dashboardView'])->name('dashboard');
-}]);
-
+});
 
