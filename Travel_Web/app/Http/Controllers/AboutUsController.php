@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class AboutUsController extends Controller
 {
-    public function aboutUsView(){
+    public function aboutUsView()
+    {
         return view('screens.aboutus');
     }
 }

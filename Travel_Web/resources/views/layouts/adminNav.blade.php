@@ -48,7 +48,7 @@
                     <a class="nav-link" href="{{url('/accommodations')}}">Accommodations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link"href="{{url('/addAccommodations')}}">Add Accommodations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/contactus') }}">Contact</a>
