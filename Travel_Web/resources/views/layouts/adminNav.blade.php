@@ -45,7 +45,7 @@
                     <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/accommodations')}}">Accommodations</a>
+                    <a class="nav-link" href="{{url('/adminAccommodationsView')}}">Accommodations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/addAccommodations')}}">Add Accommodations</a>

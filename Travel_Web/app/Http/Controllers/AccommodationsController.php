@@ -20,6 +20,12 @@ class AccommodationsController extends Controller
         return view('admin.addAccommodations');
     }
 
+    public function adminAccommodationsView()
+    {
+        $accommodations = Accommodations::all();
+        return view('admin.adminAccommodations',compact('accommodations'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -32,7 +38,7 @@ class AccommodationsController extends Controller
         // Handle the file upload
         if ($request->hasFile('image')) {
             $fileName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('images'), $fileName);
+            $request->image->move(public_path('image'), $fileName);
 
             // Save the data including the file path
             Accommodations::create([
