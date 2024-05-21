@@ -7,4 +7,11 @@
             <p>Recommend</p>
         </div>
     </div>
+
+    @foreach($accommodations as $acc)
+        <div>
+            name = {{$acc->name}}
+        </div>
+    @endforeach
+
 @endsection

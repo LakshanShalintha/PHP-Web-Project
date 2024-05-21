@@ -9,7 +9,8 @@ class AccommodationsController extends Controller
 {
     public function accommodationsView()
     {
-        return view('screens.accommodations');
+        $accommodations = Accommodations::all();
+        return view('screens.accommodations', compact('accommodations'));
     }
 
 
@@ -25,13 +26,26 @@ class AccommodationsController extends Controller
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
             'price' => 'required|integer',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        Accommodations::create($request->all());
+        // Handle the file upload
+        if ($request->hasFile('image')) {
+            $fileName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images'), $fileName);
 
-        return redirect()->route('dashboard')
-            ->with('success', 'Accommodation created successfully.');
+            // Save the data including the file path
+            Accommodations::create([
+                'name' => $request->name,
+                'location' => $request->location,
+                'price' => $request->price,
+                'image' => $fileName,
+            ]);
+
+            return redirect()->route('dashboard')
+                ->with('success', 'Accommodation created successfully.');
+        }
+
+        return back()->withErrors(['image' => 'File upload failed']);
     }
-
-
 }

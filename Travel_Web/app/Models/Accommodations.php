@@ -13,5 +13,6 @@ class Accommodations extends Model
         'name',
         'location' ,
         'price',
+        'image',
     ];
 }

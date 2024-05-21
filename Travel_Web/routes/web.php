@@ -29,5 +29,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'dashboardView'])->name('dashboard');
     Route::get('/addAccommodations', [App\Http\Controllers\AccommodationsController::class, 'addAccommodationsView'])->name('addAccommodations');
     Route::post('/storeAccommodations', [App\Http\Controllers\AccommodationsController::class, 'store'])->name('storeAccommodations');
+    Route::put('/updateAccommodations', [App\Http\Controllers\AccommodationsController::class, 'update'])->name('updateAccommodations');
 });
 

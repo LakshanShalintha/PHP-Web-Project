@@ -42,13 +42,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/accommodations')}}">Accommodations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"href="{{url('/addAccommodations')}}">Add Accommodations</a>
+                    <a class="nav-link" href="{{url('/addAccommodations')}}">Add Accommodations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/contactus') }}">Contact</a>
