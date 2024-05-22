@@ -23,7 +23,7 @@ class AccommodationsController extends Controller
     public function adminAccommodationsView()
     {
         $accommodations = Accommodations::all();
-        return view('admin.adminAccommodations',compact('accommodations'));
+        return view('admin.adminAccommodations', compact('accommodations'));
     }
 
     public function store(Request $request)
@@ -37,7 +37,7 @@ class AccommodationsController extends Controller
 
         // Handle the file upload
         if ($request->hasFile('image')) {
-            $fileName = time().'.'.$request->image->extension();
+            $fileName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('image'), $fileName);
 
             // Save the data including the file path
@@ -54,4 +54,22 @@ class AccommodationsController extends Controller
 
         return back()->withErrors(['image' => 'File upload failed']);
     }
+
+    public function destroy($id)
+    {
+        $accommodation = Accommodations::findOrFail($id);
+
+        // Delete the image file
+        $imagePath = public_path('image') . '/' . $accommodation->image;
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+
+        // Delete the accommodation
+        $accommodation->delete();
+
+        return redirect()->route('adminAccommodationsView')
+            ->with('success', 'Accommodation deleted successfully.');
+    }
+
 }

@@ -31,5 +31,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::post('/storeAccommodations', [App\Http\Controllers\AccommodationsController::class, 'store'])->name('storeAccommodations');
     Route::put('/updateAccommodations', [App\Http\Controllers\AccommodationsController::class, 'update'])->name('updateAccommodations');
     Route::get('/adminAccommodationsView', [App\Http\Controllers\AccommodationsController::class, 'adminAccommodationsView'])->name('adminAccommodationsView');
+    Route::delete('/accommodations/{id}', [App\Http\Controllers\AccommodationsController::class, 'destroy'])->name('accommodations.destroy');
 });
 
