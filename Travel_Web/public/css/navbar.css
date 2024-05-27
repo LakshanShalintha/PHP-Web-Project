@@ -78,3 +78,53 @@
     font-size: 18px;
     line-height: 0.3;
 }
+
+/*card css*/
+.card {
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+.card-img-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-title {
+    font-size: 1.5rem;
+}
+.card-text {
+    font-size: 1.2rem;
+}
+
+.location-text {
+    font-size: 0.875rem; /* Small font size for location */
+    text-transform: lowercase; /* Ensures location text is in small letters */
+    margin-bottom: 0.5rem;
+}
+.btn-bottom {
+    margin-top: auto;
+}
+
+/*text in topics(not include the text that in the images)*/
+.centered-text {
+    text-align: center;
+    padding: 20px;
+}
+.centered-text p {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+.centered-text h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+}
