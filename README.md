@@ -10,10 +10,10 @@ This project is a web application built with Laravel.
     git clone https://github.com/D-Binara/PHP-Web-Project.git
     ```
 
-2. Navigate to the backend directory:
+2. Navigate to the Travel_Web directory:
 
     ```
-    cd backend
+    cd Travel_Web
     ```
 
 3. Install dependencies:
@@ -42,10 +42,24 @@ This project is a web application built with Laravel.
     php artisan migrate
     ```
 
-8. Start the server:
+8. Install npm dependencies:
+
+    ```
+    npm install
+    ```
+
+9. Compile assets:
+
+    ```
+    npm run dev
+    ```
+
+10. Start the server:
 
     ```
     php artisan serve
     ```
 
 The project should now be running on `http://localhost:8000`.
+
+---
