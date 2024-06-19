@@ -24,6 +24,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/aboutUs', [App\Http\Controllers\AboutUsController::class, 'aboutUsView'])->name('about');
 Route::get('/contactus', [App\Http\Controllers\ContactUsController::class, 'contactusView'])->name('contactus');
 Route::get('/accommodations', [App\Http\Controllers\AccommodationsController::class, 'accommodationsView'])->name('accommodations');
+Route::get('/plan', [App\Http\Controllers\PlanController::class, 'planView'])->name('plan');
+
+
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'dashboardView'])->name('dashboard');
