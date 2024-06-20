@@ -1,36 +1,95 @@
-@extends('layouts.navbar')
+@extends('layouts.newNavbar')
 @section('content')
-    <div >
-        <img class="d-block w-100" src="{{ asset('images/image 2.png') }}" alt="Second slide">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Home Sweet Home</h5>
-            <p>Recommend</p>
-        </div>
-    </div>
 
-    <div class="d-flex justify-content-center align-items-center ">
-        <div class="centered-text">
-            <p>Recommend</p>
-            <h5>Home Sweet Home</h5>
+    <!-- Recommend Section -->
+    <section class="recommend-section text-center py-5">
+        <h2>Home Sweet Home</h2>
+        <div class="btn-group" role="group" aria-label="Recommend Buttons">
+            <button type="button" class="btn btn-dark">Accommodations</button>
+            <button type="button" class="btn btn-light">Restaurants</button>
+            <button type="button" class="btn btn-light">Reservations</button>
         </div>
-    </div>
+    </section>
 
-    @foreach($accommodations as $acc)
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
+    <!-- Accommodations Section -->
+    <section class="accommodations-section text-center py-5">
+        <h3>Accommodations</h3>
+        <div class="container">
+            <div class="row">
+                <!-- Accommodation Cards -->
+                <div class="col-md-4">
                     <div class="card">
-                        <img src="{{ asset('image/' . $acc->image) }}" class="card-img-top" alt="{{ $acc->name }}">
-                        <div class="card-img-overlay">
-                            <h1 class="card-title text-right mt-4">{{$acc->name}}</h1>
-                            <h5 class="card-text text-right location-text mt-4">{{$acc->location}}</h5>
-                            <h3 class="card-text text-right mt-4">{{$acc->price}} Rs./per night</h3>
-                            <a href="#" class="btn btn-primary btn-bottom">Book</a>
+                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Oak Ray Ella Gap Hotel">
+                        <div class="card-body">
+                            <h5 class="card-title">Oak Ray Ella Gap Hotel</h5>
+                            <p class="card-text">3500 Rs. / Per Night</p>
+                            <p class="card-text"><small class="text-muted">Rating: 4.7</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Heritance Kandalama">
+                        <div class="card-body">
+                            <h5 class="card-title">Heritance Kandalama</h5>
+                            <p class="card-text">4000 Rs. / Per Night</p>
+                            <p class="card-text"><small class="text-muted">Rating: 4.7</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Cinnamon Citadel Kandy">
+                        <div class="card-body">
+                            <h5 class="card-title">Cinnamon Citadel Kandy</h5>
+                            <p class="card-text">3500 Rs. / Per Night</p>
+                            <p class="card-text"><small class="text-muted">Rating: 4.8</small></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    @endforeach
+    </section>
+
+    <!-- Popular / Trending Section -->
+    <section class="trending-section text-center py-5">
+        <h3>Popular / Trending</h3>
+        <div class="container">
+            <div class="row">
+                <!-- Trending Cards -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Marino Beach Colombo">
+                        <div class="card-body">
+                            <h5 class="card-title">Marino Beach Colombo</h5>
+                            <p class="card-text">12,000 Rs. / Per Night</p>
+                            <p class="card-text"><small class="text-muted">Rating: 4.5</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Hikka Tranz by Cinnamon">
+                        <div class="card-body">
+                            <h5 class="card-title">Hikka Tranz by Cinnamon</h5>
+                            <p class="card-text">12,000 Rs. / Per Night</p>
+                            <p class="card-text"><small class="text-muted">Rating: 4.4</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Mount Lavinia Hotel">
+                        <div class="card-body">
+                            <h5 class="card-title">Mount Lavinia Hotel</h5>
+                            <p class="card-text">12,500 Rs. / Per Night</p>
+                            <p class="card-text"><small class="text-muted">Rating: 4.4</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 @endsection
+
