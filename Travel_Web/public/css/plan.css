@@ -1,0 +1,236 @@
+/* accommodation css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background: url('../images/plan.png') no-repeat center center/cover; /*1920x600*/
+    color: white;
+    height: 600px;
+    position: relative;
+}
+
+.header .navbar {
+    background: transparent;
+}
+
+.header .navbar-nav .nav-link {
+    color: white;
+}
+
+.header .navbar-nav .nav-link:hover {
+    color: lightgray;
+}
+
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .overlay {
+    position: absolute; /* Position absolutely within the subscription-section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.recommend-section h2,
+.accommodations-section h3,
+.trending-section h3 {
+    margin-bottom: 20px;
+}
+
+.accommodations-section .card,
+.trending-section .card {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer-description {
+    margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    margin-bottom: 10px;
+}
+
+.footer-links h5,
+.footer-contact h5,
+.footer-social h5 {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.footer-links ul,
+.footer-contact ul,
+.footer-social ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links li,
+.footer-contact li,
+.footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-social a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.footer-social a img:hover {
+    opacity: 0.7;
+}
+
+
+/* Card Styles */
+.card {
+    border: none;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Subscription Section Styles */
+.subscription-section {
+    position: relative; /* Ensure the overlay is positioned relative to this section */
+    background: url('../images/subscribe.png') no-repeat center center/cover;
+    color: white;
+    padding: 50px 0;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.subscription-section .overlay {
+    position: absolute; /* Position absolutely within the subscription-section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.subscription-section .container {
+    position: relative; /* Ensure the container is above the overlay */
+    z-index: 2;
+    margin-top: 110px;
+}
+
+.subscription-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.subscription-section .form-inline {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.subscription-section .form-control {
+    width: 650px;
+    border-radius: 0;
+}
+
+.subscription-section .btn {
+    width: 25%;
+    border-radius: 0;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .subscription-section h2 {
+        font-size: 2rem;
+    }
+
+    .subscription-section .form-control {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .subscription-section .btn {
+        width: 100%;
+    }
+
+    .subscription-section .container {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .subscription-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .subscription-section .form-group {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Custom Button Styles */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap value as needed */
+}
+
+.btn-group .custom-btn {
+    border-radius: 50px;
+    padding: 5px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    flex: 1; /* Make all buttons the same size */
+    max-width: 200px; /* Adjust the max width as needed */
+}
+
+.btn-group .custom-btn.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-group .custom-btn:not(.active) {
+    background-color: #e9ecef;
+    color: #000;
+}
+
+.btn-group .custom-btn:not(.active):hover {
+    background-color: #ced4da;
+    color: #000;
+}
