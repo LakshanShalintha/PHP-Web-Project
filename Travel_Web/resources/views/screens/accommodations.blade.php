@@ -3,11 +3,13 @@
 
     <!-- Recommend Section -->
     <section class="recommend-section text-center py-5">
-        <h2>Home Sweet Home</h2>
-        <div class="btn-group" role="group" aria-label="Recommend Buttons">
-            <button type="button" class="btn btn-dark">Accommodations</button>
-            <button type="button" class="btn btn-light">Restaurants</button>
-            <button type="button" class="btn btn-light">Reservations</button>
+        <div class="container">
+            <h2>Home Sweet Home</h2>
+            <div class="btn-group mt-4" role="group" aria-label="Basic example">
+                <button type="button" class="btn custom-btn active">Accommodations</button>
+                <button type="button" class="btn custom-btn">Restaurants</button>
+                <button type="button" class="btn custom-btn">Reservations</button>
+            </div>
         </div>
     </section>
 
