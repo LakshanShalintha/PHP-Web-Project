@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travlo - Home Sweet Home</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/js/app.js'])
@@ -67,7 +68,7 @@
         </nav>
     </div>
     <!-- Hero Section -->
-    <header class="hero-section text-center">
+    <div class="hero-section text-center">
         <div class="container">
             <h1 class="display-4">Welcome to the Sri Lanka</h1>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
@@ -84,10 +85,10 @@
                     <label for="people" class="sr-only">People</label>
                     <input type="number" class="form-control" id="people" placeholder="People">
                 </div>
-                <button type="submit" class="btn btn-primary mb-2">Explore Now</button>
+                <button type="submit" class="btn btn-custom mb-2">Explore Now</button>
             </form>
         </div>
-    </header>
+    </div>
 </header>
 
 
@@ -97,17 +98,17 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-md-4">
-                <i class="fa fa-map-signs fa-2x mb-3"></i>
+                <i class="fas fa-map-signs fa-2x mb-3"></i>
                 <h4>Plan Your Journey</h4>
                 <p>Tour Plans</p>
             </div>
             <div class="col-md-4">
-                <i class="fa fa-home fa-2x mb-3"></i>
+                <i class="fas fa-home fa-2x mb-3"></i>
                 <h4>Home Sweet Home</h4>
                 <p>Recommend</p>
             </div>
             <div class="col-md-4">
-                <i class="fa fa-car fa-2x mb-3"></i>
+                <i class="fas fa-car fa-2x mb-3"></i>
                 <h4>Find Your Ride</h4>
                 <p>Available Transportations</p>
             </div>
@@ -120,12 +121,12 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <img src="about-image.jpg" alt="About Us" class="img-fluid">
+                <img src="{{ asset('images/about_first.png') }}" alt="About Us" class="img-fluid">
             </div>
             <div class="col-md-6">
                 <h2>Discover Our Story</h2>
-                <p>Welcome to [Website Name], your ultimate guide to exploring the wonders of Sri Lanka! We provide curated content and insider tips to help you plan your perfect getaway while promoting sustainable tourism practices.</p>
-                <a href="#" class="btn btn-primary">Explore Now</a>
+                <p>Welcome to Travlo, your ultimate guide to exploring the wonders of Sri Lanka! We provide curated content and insider tips to help you plan your perfect getaway while promoting sustainable tourism practices.</p>
+                <a href="#" class="btn btn-custom">Explore Now</a>
             </div>
         </div>
     </div>
@@ -141,7 +142,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="lion-rock.jpg" class="card-img-top" alt="The Lion Rock">
+                                <img src="{{ asset('images/sigiriyaCard.png') }}" class="card-img-top" alt="The Lion Rock">
                                 <div class="card-body">
                                     <h5 class="card-title">The Lion Rock</h5>
                                     <p class="card-text">Sigiriya Lion Rock Fortress, located in Sri Lanka, is a striking ancient citadel towering amidst lush greenery.</p>
@@ -150,7 +151,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="nine-arch-bridge.jpg" class="card-img-top" alt="Nine Arch Bridge">
+                                <img src="{{ asset('images/n_archCard.png') }}" class="card-img-top" alt="Nine Arch Bridge">
                                 <div class="card-body">
                                     <h5 class="card-title">Nine Arch Bridge</h5>
                                     <p class="card-text">The Nine Arch Bridge is a stunning feat of colonial-era engineering nestled amidst lush greenery.</p>
@@ -159,7 +160,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="ambuluwawa-tower.jpg" class="card-img-top" alt="Ambuluwawa Tower">
+                                <img src="{{ asset('images/ambuluwawa.png') }}" class="card-img-top" alt="Ambuluwawa Tower">
                                 <div class="card-body">
                                     <h5 class="card-title">Ambuluwawa Tower</h5>
                                     <p class="card-text">Ambuluwawa Tower in Gampola, Sri Lanka, is a striking multi-tiered structure offering panoramic views.</p>
@@ -192,7 +193,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="sri-dalada-perahera.jpg" class="card-img-top" alt="Sri Dalada Perahera">
+                                <img src="{{ asset('images/perahera.png') }}" class="card-img-top" alt="Sri Dalada Perahera">
                                 <div class="card-body">
                                     <h5 class="card-title">Sri Dalada Perahera</h5>
                                     <p class="card-text">Kandy, Sri Lanka</p>
@@ -201,7 +202,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="ultra-edm-festival.jpg" class="card-img-top" alt="Ultra EDM Festival">
+                                <img src="{{ asset('images/edm.png') }}" class="card-img-top" alt="Ultra EDM Festival">
                                 <div class="card-body">
                                     <h5 class="card-title">Ultra EDM Festival</h5>
                                     <p class="card-text">Colombo, Sri Lanka</p>
@@ -210,7 +211,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="new-year-festival.jpg" class="card-img-top" alt="New Year Festival">
+                                <img src="{{ asset('images/new_year.png') }}" class="card-img-top" alt="New Year Festival">
                                 <div class="card-body">
                                     <h5 class="card-title">New Year Festival</h5>
                                     <p class="card-text">Kandy, Sri Lanka</p>
@@ -240,31 +241,31 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="temple-of-tooth.jpg" class="card-img-top" alt="Temple of the Tooth">
+                    <img src="{{ asset('images/temple-of-tooth.png') }}" class="card-img-top" alt="Temple of the Tooth">
                     <div class="card-body">
                         <h5 class="card-title">The Temple of the Tooth</h5>
                         <p class="card-text">The Temple of the Tooth, located in the heart of Kandy, Sri Lanka, is a sacred haven steeped in centuries of reverence, where devotees gather to pay homage.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <a href="#" class="btn btn-custom">Read More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="colombo-to-jaffna.jpg" class="card-img-top" alt="Colombo to Jaffna">
+                    <img src="{{ asset('images/ganagaramaya.png') }}" class="card-img-top" alt="Colombo to Jaffna">
                     <div class="card-body">
                         <h5 class="card-title">Colombo to Jaffna</h5>
                         <p class="card-text">The journey from Colombo to Jaffna is a captivating experience that traverses diverse landscapes and cultural nuances. Starting from the vibrant.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <a href="#" class="btn btn-custom">Read More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="island-paradise.jpg" class="card-img-top" alt="The Island Paradise">
+                    <img src="{{ asset('images/paradise.png') }}" class="card-img-top" alt="The Island Paradise">
                     <div class="card-body">
                         <h5 class="card-title">The Island Paradise</h5>
                         <p class="card-text">Sri Lanka, often referred to as the “Island Paradise,” is a breathtaking destination renowned for its natural beauty and cultural richness.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <a href="#" class="btn btn-custom">Read More</a>
                     </div>
                 </div>
             </div>
