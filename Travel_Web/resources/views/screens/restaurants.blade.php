@@ -6,7 +6,7 @@
         <div class="container">
             <h2>Home Sweet Home</h2>
             <div class="btn-group mt-4" role="group" aria-label="Basic example">
-                <button type="button" class="btn custom-btn ">Accommodations</button>
+                <button type="button" class="btn custom-btn" onclick="window.location='{{ route('accommodations') }}'">Accommodations</button>
                 <button type="button" class="btn custom-btn active">Restaurants</button>
                 <button type="button" class="btn custom-btn">Reservations</button>
             </div>

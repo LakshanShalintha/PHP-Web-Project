@@ -7,45 +7,54 @@
             <h2>Home Sweet Home</h2>
             <div class="btn-group mt-4" role="group" aria-label="Basic example">
                 <button type="button" class="btn custom-btn active">Accommodations</button>
-                <button type="button" class="btn custom-btn">Restaurants</button>
+                <button type="button" class="btn custom-btn" onclick="window.location='{{ route('restaurants') }}'">Restaurants</button>
                 <button type="button" class="btn custom-btn">Reservations</button>
             </div>
         </div>
     </section>
 
     <!-- Accommodations Section -->
-    <section class="accommodations-section text-center py-5">
-        <h3>Accommodations</h3>
+    <section class="accommodations-section py-5">
+        <h3 class="text-center">Accommodations</h3>
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <!-- Accommodation Cards -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Oak Ray Ella Gap Hotel">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card accommodation-card">
+                        <img src="{{ asset('images/cardAccommodation.png') }}" class="card-img-top" alt="Oak Ray Ella Gap Hotel">
+                        <div class="rating-badge">
+                            <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Oak Ray Ella Gap Hotel</h5>
-                            <p class="card-text">3500 Rs. / Per Night</p>
-                            <p class="card-text"><small class="text-muted">Rating: 4.7</small></p>
+                            <p class="card-text">Passara Road, Ella</p>
+                            <p class="card-price">3500 Rs. / Per Night</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Heritance Kandalama">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card accommodation-card">
+                        <img src="{{ asset('images/cardAccommodation.png') }}" class="card-img-top" alt="Oak Ray Ella Gap Hotel">
+                        <div class="rating-badge">
+                            <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Heritance Kandalama</h5>
-                            <p class="card-text">4000 Rs. / Per Night</p>
-                            <p class="card-text"><small class="text-muted">Rating: 4.7</small></p>
+                            <h5 class="card-title">Oak Ray Ella Gap Hotel</h5>
+                            <p class="card-text">Passara Road, Ella</p>
+                            <p class="card-price">3500 Rs. / Per Night</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Cinnamon Citadel Kandy">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card accommodation-card">
+                        <img src="{{ asset('images/cardAccommodation.png') }}" class="card-img-top" alt="Oak Ray Ella Gap Hotel">
+                        <div class="rating-badge">
+                            <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Cinnamon Citadel Kandy</h5>
-                            <p class="card-text">3500 Rs. / Per Night</p>
-                            <p class="card-text"><small class="text-muted">Rating: 4.8</small></p>
+                            <h5 class="card-title">Oak Ray Ella Gap Hotel</h5>
+                            <p class="card-text">Passara Road, Ella</p>
+                            <p class="card-price">3500 Rs. / Per Night</p>
                         </div>
                     </div>
                 </div>
@@ -53,45 +62,61 @@
         </div>
     </section>
 
+
+
     <!-- Popular / Trending Section -->
-    <section class="trending-section text-center py-5">
-        <h3>Popular / Trending</h3>
+    <section class="trending-section py-5">
+        <h3 class="text-center">Popular / Trending</h3>
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <!-- Trending Cards -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Marino Beach Colombo">
+                <div class="col-md-12 d-flex justify-content-center mb-4">
+                    <div class="card trending-card">
+                        <img src="{{ asset('images/cardTrending.png') }}" alt="Marino Beach Colombo">
+                        <div class="overlay"></div>
+                        <div class="rating-badge">
+                            <span class="badge"><i class="fas fa-star"></i> 4.5 (123)</span>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Marino Beach Colombo</h5>
-                            <p class="card-text">12,000 Rs. / Per Night</p>
-                            <p class="card-text"><small class="text-muted">Rating: 4.5</small></p>
+                            <p class="card-text">Colombo</p>
+                            <p class="card-price">12,000 Rs. / Per Night</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Hikka Tranz by Cinnamon">
+                <div class="col-md-12 d-flex justify-content-center mb-4">
+                    <div class="card trending-card">
+                        <img src="{{ asset('images/cardTrending.png') }}" alt="Marino Beach Colombo">
+                        <div class="overlay"></div>
+                        <div class="rating-badge">
+                            <span class="badge "><i class="fas fa-star"></i> 4.5 (123)</span>
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Hikka Tranz by Cinnamon</h5>
-                            <p class="card-text">12,000 Rs. / Per Night</p>
-                            <p class="card-text"><small class="text-muted">Rating: 4.4</small></p>
+                            <h5 class="card-title">Marino Beach Colombo</h5>
+                            <p class="card-text">Colombo</p>
+                            <p class="card-price">12,000 Rs. / Per Night</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x250" class="card-img-top" alt="Mount Lavinia Hotel">
+                <div class="col-md-12 d-flex justify-content-center mb-4">
+                    <div class="card trending-card">
+                        <img src="{{ asset('images/cardTrending.png') }}" alt="Marino Beach Colombo">
+                        <div class="overlay"></div>
+                        <div class="rating-badge">
+                            <span class="badge "><i class="fas fa-star"></i> 4.5 (123)</span>
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Mount Lavinia Hotel</h5>
-                            <p class="card-text">12,500 Rs. / Per Night</p>
-                            <p class="card-text"><small class="text-muted">Rating: 4.4</small></p>
+                            <h5 class="card-title">Marino Beach Colombo</h5>
+                            <p class="card-text">Colombo</p>
+                            <p class="card-price">12,000 Rs. / Per Night</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
 @endsection
 

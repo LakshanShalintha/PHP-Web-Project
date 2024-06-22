@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travlo - Home Sweet Home</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="{{ asset('css/newNavbar.css') }}" rel="stylesheet">
+
+    <!-- Scripts -->
+    @vite(['resources/js/app.js'])
 </head>
 <body>
 <!-- Header Section -->
@@ -117,8 +121,8 @@
             <div class="col-md-2 footer-social">
                 <h5>Follow Us</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#"><img src="path/to/instagram-icon.png" alt="Instagram"></a></li>
-                    <li><a href="#"><img src="path/to/facebook-icon.png" alt="Facebook"></a></li>
+                    <li><a href="#"> <i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a href="#"> <i class="fab fa-facebook fa-2x"></i></a></li>
                 </ul>
             </div>
         </div>
