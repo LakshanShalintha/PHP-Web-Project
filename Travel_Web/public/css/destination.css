@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-    background: url('../images/plan.png') no-repeat center center/cover; /*1920x600*/
+    background: url('../images/destination.png') no-repeat center center/cover; /*1920x600*/
     color: white;
     height: 890px;
     position: relative;
