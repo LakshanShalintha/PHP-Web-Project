@@ -26,6 +26,9 @@ Route::get('/contactus', [App\Http\Controllers\ContactUsController::class, 'cont
 Route::get('/accommodations', [App\Http\Controllers\AccommodationsController::class, 'accommodationsView'])->name('accommodations');
 Route::get('/restaurants', [App\Http\Controllers\RestaurantsController::class, 'restaurantsView'])->name('restaurants');
 Route::get('/plan', [App\Http\Controllers\PlanController::class, 'planView'])->name('plan');
+Route::get('/festival', [App\Http\Controllers\FestivalController::class, 'festivalView'])->name('festival');
+Route::get('/documentaries', [App\Http\Controllers\DocumentariesController::class, 'documentariesView'])->name('documentaries');
+Route::get('/destination', [App\Http\Controllers\DestinationController::class, 'destinationView'])->name('destination');
 
 
 

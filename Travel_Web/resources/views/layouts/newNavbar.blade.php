@@ -24,8 +24,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/destination')}}">Destination</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/accommodations')}}">Accommodations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/festival')}}">Festival</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/documentaries')}}">Documentaries</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/contactus') }}">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>
 
