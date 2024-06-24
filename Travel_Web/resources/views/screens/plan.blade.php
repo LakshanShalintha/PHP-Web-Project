@@ -1,9 +1,6 @@
 @extends('layouts.applayout')
 @section('content')
 
-    <link href="{{ asset('css/plan.css') }}" rel="stylesheet">
-</head>
-<body>
 <!-- Header Section -->
 <header class="header">
     <div class="overlay">
