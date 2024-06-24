@@ -3,7 +3,7 @@
 
 
 <!-- Header Section -->
-<header class="header">
+<header class="header" style="background: url('../images/sigiriya.png') no-repeat center center/cover; ">
     <div class="overlay">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">TRAVLO</a>

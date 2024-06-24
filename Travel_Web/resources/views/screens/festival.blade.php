@@ -1,7 +1,7 @@
 @extends('layouts.applayout')
 @section('content')
     <!-- Header Section -->
-    <header class="header">
+    <header class="header" style="background: url('../images/festival.png') no-repeat center center/cover; ">
         <div class="overlay">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="#">TRAVLO</a>
