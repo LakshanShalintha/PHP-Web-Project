@@ -11,6 +11,10 @@
     <link href="{{ asset('css/festival.css') }}" rel="stylesheet">
     <link href="{{ asset('css/destination.css') }}" rel="stylesheet">
     <link href="{{ asset('css/plan.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/documentaries.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/user_layout.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/accommodations.css') }}" rel="stylesheet">
+
 
     <!-- Scripts -->
     @vite(['resources/js/app.js'])

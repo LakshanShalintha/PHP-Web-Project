@@ -1,0 +1,46 @@
+/* custom.css */
+.documentaries {
+    margin-top: 20px;
+}
+
+.documentaries .custom-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.documentaries .custom-card-img {
+    object-fit: cover;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.documentaries .custom-card-body {
+    padding: 20px;
+}
+
+.documentaries .custom-card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.documentaries .custom-card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.documentaries .btn-dark {
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.documentaries .btn-dark:hover {
+    background-color: #555;
+}

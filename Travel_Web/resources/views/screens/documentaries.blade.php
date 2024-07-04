@@ -65,7 +65,29 @@
 </header>
 
 <main>
-    asdad
+    <div class="container my-5">
+        <section class="documentaries">
+            <div class="card custom-card">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="{{ asset('images/maligawa.png') }}" class="card-img" alt="The Temple of Tooth">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h5 class="card-title">The Temple of Tooth</h5>
+                            <p class="card-text">
+                                Sri Dalada Maligawa, also known as the Temple of the Sacred Tooth Relic, stands as a majestic testament to Sri Lanka's rich cultural heritage. Nestled amidst the bustling city of Kandy, this revered temple houses the relic of the Buddha's tooth, making it one of the holiest sites in the Buddhist world.
+                            </p>
+                            <p class="card-text">
+                                Its architectural splendor, adorned with intricate carvings and vibrant paintings, serves as a homage to the island's spiritual legacy.
+                            </p>
+                            <a href="#" class="btn btn-dark">Read More... →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
 
 @endsection

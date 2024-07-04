@@ -6,7 +6,6 @@ body {
 }
 
 .header {
-    background: url('../images/accommodations.jpg') no-repeat center center/cover; /*1920x600*/
     color: white;
     height: 890px;
     position: relative;
