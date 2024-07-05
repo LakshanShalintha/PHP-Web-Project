@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- Header Section -->
-<header class="header">
+<header class="header" style="background: url('../images/plan.png') no-repeat center center/cover; /*1920x600*/ ">
     <div class="overlay">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">TRAVLO</a>

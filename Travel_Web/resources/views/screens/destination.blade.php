@@ -65,8 +65,107 @@
     </div>
 </header>
 
-<main>
-    asdad
-</main>
+<!-- Recommend Section -->
+<section class="recommend-section text-center py-5">
+    <div class="container">
+        <h2>Exploring the Best
+            Destinations</h2>
+    </div>
+</section>
 
+
+<!-- Must-Visit Destinations Section -->
+<section class="destinations-section py-5">
+    <div class="container">
+        <div id="destinationsCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{{ asset('images/sigiriyaCard.png') }}" class="card-img-top" alt="The Lion Rock">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Lion Rock</h5>
+                                    <p class="card-text">Sigiriya Lion Rock Fortress, located in Sri Lanka, is a striking ancient citadel towering amidst lush greenery.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{{ asset('images/n_archCard.png') }}" class="card-img-top" alt="Nine Arch Bridge">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nine Arch Bridge</h5>
+                                    <p class="card-text">The Nine Arch Bridge is a stunning feat of colonial-era engineering nestled amidst lush greenery.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{{ asset('images/ambuluwawa.png') }}" class="card-img-top" alt="Ambuluwawa Tower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ambuluwawa Tower</h5>
+                                    <p class="card-text">Ambuluwawa Tower in Gampola, Sri Lanka, is a striking multi-tiered structure offering panoramic views.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel items here for more destinations -->
+            </div>
+            <a class="carousel-control-prev" href="#destinationsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#destinationsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Destinations Section -->
+<section class="destinations-section2 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="card col-md-6 mb-4">
+                    <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <h5 class="card-title">Gall Fort</h5>
+                        <p class="card-text">More Details...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <h5 class="card-title">Gall Fort</h5>
+                        <p class="card-text">More Details...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card col-md-6 mb-4">
+                    <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <h5 class="card-title">Gall Fort</h5>
+                        <p class="card-text">More Details...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card col-md-6 mb-4">
+                    <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <h5 class="card-title">Gall Fort</h5>
+                        <p class="card-text">More Details...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

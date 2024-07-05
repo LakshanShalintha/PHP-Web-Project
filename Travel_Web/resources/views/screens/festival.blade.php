@@ -66,7 +66,27 @@
     </header>
 
     <main>
-        asdad
+        <div class="container my-5">
+            <div class="card custom-card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{ asset('images/dalada_perahera.png') }}"  class="card-img" alt="Sri Daladha Perahera">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Sri Daladha Perahera</h5>
+                            <p class="card-text"><small class="text-muted">Kandy | Sri Lanka</small></p>
+                            <p class="card-text">
+                                Sri Dalada Maligawa, also known as the Temple of the Sacred Tooth Relic, is a revered site in Kandy, Sri Lanka.
+                                Housing the relic of the Buddha's tooth, it's a symbol of the island's rich spiritual heritage. Surrounded by
+                                lush greenery and adorned with intricate carvings, the temple attracts pilgrims and tourists alike, offering a
+                                glimpse into Sri Lanka's profound cultural legacy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 @endsection
