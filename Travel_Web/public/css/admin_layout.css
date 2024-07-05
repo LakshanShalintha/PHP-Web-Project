@@ -40,4 +40,9 @@ body {
     z-index: 1; /* Ensure the overlay is below the navbar */
 }
 
+main{
+    color: black;
+    position: relative;
+    z-index: 2;
+}
 
