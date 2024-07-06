@@ -48,8 +48,8 @@ class AccommodationsController extends Controller
                 'image' => $fileName,
             ]);
 
-            return redirect()->route('dashboard')
-                ->with('success', 'Accommodation created successfully.');
+            return redirect()->route('addAccommodations')->with('success', 'Accommodation created successfully.');
+
         }
 
         return back()->withErrors(['image' => 'File upload failed']);
