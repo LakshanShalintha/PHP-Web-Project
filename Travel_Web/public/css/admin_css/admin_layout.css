@@ -3,16 +3,16 @@ body {
 }
 
 .header {
-    background: url('../images/adminbg.jpg') no-repeat center center/cover; /*1920x600*/
+    background: url('../../images/adminbg.jpg') no-repeat center center/cover; /*1920x600*/
     color: white;
     height: 100vh;
     position: relative;
 }
 
-
 .header .navbar {
     background: transparent;
-    z-index: 3; /* Ensure the navbar is above the overlay */
+    z-index: 3; /* Ensure the navbar is above the overlay and main */
+    position: relative;
 }
 
 .header .navbar-nav .nav-link {
@@ -40,9 +40,8 @@ body {
     z-index: 1; /* Ensure the overlay is below the navbar */
 }
 
-main{
+main {
     color: black;
-    position: relative;
-    z-index: 2;
+    position: relative; /* Ensure main is positioned relative to its normal position */
+    z-index: 2; /* Ensure main is above the overlay but below the navbar */
 }
-
