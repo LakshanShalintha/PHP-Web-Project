@@ -31,7 +31,6 @@ Route::get('/documentaries', [App\Http\Controllers\DocumentariesController::clas
 Route::get('/destination', [App\Http\Controllers\DestinationController::class, 'destinationView'])->name('destination');
 
 
-
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'dashboardView'])->name('dashboard');
     Route::get('/addAccommodations', [App\Http\Controllers\AccommodationsController::class, 'addAccommodationsView'])->name('addAccommodations');
