@@ -55,6 +55,31 @@ class AccommodationsController extends Controller
         return back()->withErrors(['image' => 'File upload failed']);
     }
 
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'location' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $accommodation = Accommodations::find($id);
+        $accommodation->name = $request->input('name');
+        $accommodation->location = $request->input('location');
+        $accommodation->price = $request->input('price');
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('image'), $filename);
+            $accommodation->image = $filename;
+        }
+
+        $accommodation->save();
+        return redirect()->route('adminAccommodationsView')->with('success', 'Accommodation updated successfully');
+    }
+
     public function destroy($id)
     {
         $accommodation = Accommodations::findOrFail($id);

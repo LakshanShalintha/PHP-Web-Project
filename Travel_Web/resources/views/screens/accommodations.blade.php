@@ -82,46 +82,22 @@
         <h3 class="text-center">Accommodations</h3>
         <div class="container">
             <div class="row justify-content-center">
+                @foreach($accommodations as $acc)
                 <!-- Accommodation Cards -->
                 <div class="col-md-4 d-flex justify-content-center">
                     <div class="card accommodation-card">
-                        <img src="{{ asset('images/cardAccommodation.png') }}" class="card-img-top" alt="Oak Ray Ella Gap Hotel">
+                        <img src="{{ asset('image/' . $acc->image) }}"  class="card-img-top" alt="{{ $acc->name }}">
                         <div class="rating-badge">
                             <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Oak Ray Ella Gap Hotel</h5>
-                            <p class="card-text">Passara Road, Ella</p>
-                            <p class="card-price">3500 Rs. / Per Night</p>
+                            <h5 class="card-title">{{ $acc->name }}</h5>
+                            <p class="card-text">{{ $acc->location }}</p>
+                            <p class="card-price">{{ $acc->price }} Rs. / Per Night</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card accommodation-card">
-                        <img src="{{ asset('images/cardAccommodation.png') }}" class="card-img-top" alt="Oak Ray Ella Gap Hotel">
-                        <div class="rating-badge">
-                            <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Oak Ray Ella Gap Hotel</h5>
-                            <p class="card-text">Passara Road, Ella</p>
-                            <p class="card-price">3500 Rs. / Per Night</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card accommodation-card">
-                        <img src="{{ asset('images/cardAccommodation.png') }}" class="card-img-top" alt="Oak Ray Ella Gap Hotel">
-                        <div class="rating-badge">
-                            <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Oak Ray Ella Gap Hotel</h5>
-                            <p class="card-text">Passara Road, Ella</p>
-                            <p class="card-price">3500 Rs. / Per Night</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -179,8 +155,6 @@
             </div>
         </div>
     </section>
-
-
 
 @endsection
 

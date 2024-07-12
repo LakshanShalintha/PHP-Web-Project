@@ -35,8 +35,11 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'dashboardView'])->name('dashboard');
     Route::get('/addAccommodations', [App\Http\Controllers\AccommodationsController::class, 'addAccommodationsView'])->name('addAccommodations');
     Route::post('/storeAccommodations', [App\Http\Controllers\AccommodationsController::class, 'store'])->name('storeAccommodations');
-    Route::put('/updateAccommodations', [App\Http\Controllers\AccommodationsController::class, 'update'])->name('updateAccommodations');
+    Route::put('/updateAccommodations/{id}', [App\Http\Controllers\AccommodationsController::class, 'update'])->name('updateAccommodations');
     Route::get('/adminAccommodationsView', [App\Http\Controllers\AccommodationsController::class, 'adminAccommodationsView'])->name('adminAccommodationsView');
     Route::delete('/accommodations/{id}', [App\Http\Controllers\AccommodationsController::class, 'destroy'])->name('accommodations.destroy');
+    Route::get('/addDestination', [App\Http\Controllers\DestinationController::class, 'addDestinationView'])->name('addDestination');
+    Route::get('/adminDestination', [App\Http\Controllers\DestinationController::class, 'adminDestinationView'])->name('adminDestination');
+    Route::post('/storeDestination', [App\Http\Controllers\DestinationController::class, 'store'])->name('storeDestination');
 });
 
