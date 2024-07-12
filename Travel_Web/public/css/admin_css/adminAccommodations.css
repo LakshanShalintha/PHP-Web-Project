@@ -1,3 +1,10 @@
-.recommend-section h2{
-    margin-bottom: 20px;
+body {
+    font-family: Arial, sans-serif;
 }
+
+.accommodations-section h2{
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+

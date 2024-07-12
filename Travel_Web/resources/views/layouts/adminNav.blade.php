@@ -20,6 +20,7 @@
 
     <link href="{{ asset('css/admin_css/admin_layout.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin_css/addAccommodations.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin_css/adminAccommodations.css') }}" rel="stylesheet">
 
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -41,15 +42,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/destination')}}">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/adminDestination')}}">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/addDestination') }}">Add Destination</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/adminAccommodationsView')}}">Accommodations</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/addAccommodations')}}">Add Accommodations</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/addAccommodations')}}">Add Accommodations</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/festival')}}">Festival</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/documentaries')}}">Documentaries</a></li>
-                    {{--            <li class="nav-item"><a class="nav-link" href="{{ url('/contactus') }}">Contact</a></li>--}}
-                    {{--            <li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>--}}
+                    {{--<li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>--}}
 
                     <!-- Authentication Links -->
                     @guest
@@ -97,7 +96,7 @@
 
 <script>
     // Update the file input label with the selected file name
-    $('#image').on('change', function() {
+    $('#image').on('change', function () {
         var fileName = $(this).val().split('\\').pop();
         $(this).next('.custom-file-label').addClass("selected").html(fileName);
     });
