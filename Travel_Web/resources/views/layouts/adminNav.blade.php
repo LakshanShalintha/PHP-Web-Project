@@ -18,9 +18,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
+
     <link href="{{ asset('css/admin_css/admin_layout.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin_css/addAccommodations.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin_css/adminAccommodations.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin_css/adminDestination.css') }}" rel="stylesheet">
+
 
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
