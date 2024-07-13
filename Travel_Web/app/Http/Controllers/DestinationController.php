@@ -31,17 +31,20 @@ class DestinationController extends Controller
             'image' => 'required|image',
         ]);
 
-        $imagePath = $request->file('image')->store('images', 'public');
+        if ($request->hasFile('image')) {
+            $fileName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('image'), $fileName);
 
-        Destination::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'image' => $imagePath,
-        ]);
+            Destination::create([
+                'title' => $request->title,
+                'description' => $request->description,
+                'image' => $fileName,
+            ]);
 
-        return redirect()->route('adminDestination')->with('success', 'Destination created successfully.');
+            return redirect()->route('adminDestination')->with('success', 'Destination created successfully.');
+        }
+        return back()->withErrors(['image' => 'File upload failed']);
     }
-
 
 
 }
