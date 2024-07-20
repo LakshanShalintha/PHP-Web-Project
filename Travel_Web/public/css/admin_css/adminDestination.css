@@ -1,0 +1,26 @@
+.destinations-section2 card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destinations-section2 card img {
+    border-radius: 20px;
+}
+
+.destinations-section2 .card-img-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 20px;
+}
+
+.destinations-section2 .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.destinations-section2 .card-text {
+    font-size: 1.2rem;
+}

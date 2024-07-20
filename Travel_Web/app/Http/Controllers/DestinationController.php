@@ -13,7 +13,8 @@ class DestinationController extends Controller
     }
 
     //admin controller
-    public function addDestinationView(){
+    public function addDestinationView()
+    {
         return view('admin.addDestinations');
     }
 
@@ -46,5 +47,34 @@ class DestinationController extends Controller
         return back()->withErrors(['image' => 'File upload failed']);
     }
 
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'image',
+        ]);
+
+        $destination = Destination::findOrFail($id);
+        $data = $request->only(['title', 'description']);
+
+        if ($request->hasFile('image')) {
+            $fileName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('image'), $fileName);
+            $data['image'] = $fileName;
+        }
+
+        $destination->update($data);
+
+        return redirect()->route('adminDestination')->with('success', 'Destination updated successfully.');
+    }
+
+    public function destroy($id)
+    {
+        $destination = Destination::findOrFail($id);
+        $destination->delete();
+
+        return redirect()->route('adminDestination')->with('success', 'Destination deleted successfully.');
+    }
 
 }
