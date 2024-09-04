@@ -1,5 +1,5 @@
-# Travallo: Discover the Beauty of Sri Lanka
-Travallo is a comprehensive web platform designed to enhance the Sri Lankan tourism experience. Whether you're planning your next vacation or looking to explore the rich culture and breathtaking landscapes of Sri Lanka, Travallo has you covered.
+# Travalo: Discover the Beauty of Sri Lanka
+Travalo is a comprehensive web platform designed to enhance the Sri Lankan tourism experience. Whether you're planning your next vacation or looking to explore the rich culture and breathtaking landscapes of Sri Lanka, Travalo has you covered.
 
 Features
 Explore Top Travel Destinations: Discover the best places to visit across Sri Lanka, from historical landmarks to hidden gems.
