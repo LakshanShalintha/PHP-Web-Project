@@ -9,7 +9,8 @@ class DestinationController extends Controller
 {
     public function destinationView()
     {
-        return view('screens.destination');
+        $destinations = Destination::all();
+        return view('screens.destination',compact('destinations'));
     }
 
     //admin controller
