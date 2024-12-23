@@ -2,7 +2,8 @@
 @section('content')
 
     <!-- Header Section -->
-    <header class="header" style=" background: url('../images/accommodations.jpg') no-repeat center center/cover; /*1920x600*/">
+    <header class="header"
+            style=" background: url('../images/accommodations.jpg') no-repeat center center/cover; /*1920x600*/">
         <div class="overlay">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="#">TRAVLO</a>
@@ -14,9 +15,11 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/destination')}}">Destination</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('/accommodations')}}">Accommodations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url('/accommodations')}}">Accommodations</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/festival')}}">Festival</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/documentaries')}}">Documentaries</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/plan') }}">Plan</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/contactus') }}">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>
 
@@ -71,7 +74,9 @@
             <h2>Home Sweet Home</h2>
             <div class="btn-group mt-4" role="group" aria-label="Basic example">
                 <button type="button" class="btn custom-btn active">Accommodations</button>
-                <button type="button" class="btn custom-btn" onclick="window.location='{{ route('restaurants') }}'">Restaurants</button>
+                <button type="button" class="btn custom-btn" onclick="window.location='{{ route('restaurants') }}'">
+                    Restaurants
+                </button>
                 <button type="button" class="btn custom-btn">Reservations</button>
             </div>
         </div>
@@ -83,20 +88,20 @@
         <div class="container">
             <div class="row justify-content-center">
                 @foreach($accommodations as $acc)
-                <!-- Accommodation Cards -->
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card accommodation-card">
-                        <img src="{{ asset('image/' . $acc->image) }}"  class="card-img-top" alt="{{ $acc->name }}">
-                        <div class="rating-badge">
-                            <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $acc->name }}</h5>
-                            <p class="card-text">{{ $acc->location }}</p>
-                            <p class="card-price">{{ $acc->price }} Rs. / Per Night</p>
+                    <!-- Accommodation Cards -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card accommodation-card">
+                            <img src="{{ asset('image/' . $acc->image) }}" class="card-img-top" alt="{{ $acc->name }}">
+                            <div class="rating-badge">
+                                <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $acc->name }}</h5>
+                                <p class="card-text">{{ $acc->location }}</p>
+                                <p class="card-price">{{ $acc->price }} Rs. / Per Night</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
