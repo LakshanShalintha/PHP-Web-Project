@@ -29,6 +29,7 @@ Route::get('/plan', [App\Http\Controllers\PlanController::class, 'planView'])->n
 Route::get('/festival', [App\Http\Controllers\FestivalController::class, 'festivalView'])->name('festival');
 Route::get('/documentaries', [App\Http\Controllers\DocumentariesController::class, 'documentariesView'])->name('documentaries');
 Route::get('/destination', [App\Http\Controllers\DestinationController::class, 'destinationView'])->name('destination');
+Route::post('/contact', [App\Http\Controllers\ContactController::class, 'submit'])->name('contact.submit');
 
 
 Route::group(['middleware' => ['auth', 'admin']], function () {

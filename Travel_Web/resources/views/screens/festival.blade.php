@@ -17,9 +17,9 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/festival')}}">Festival</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/documentaries')}}">Documentaries</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/plan') }}">Plan</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/contactus') }}">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/plan') }}">Plan</a></li>
 
                         <!-- Authentication Links -->
                         @guest
