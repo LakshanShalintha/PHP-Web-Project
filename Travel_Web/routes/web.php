@@ -43,5 +43,15 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::post('/storeDestination', [App\Http\Controllers\DestinationController::class, 'store'])->name('storeDestination');
     Route::put('/admin/destinations/update/{id}', [App\Http\Controllers\DestinationController::class, 'update'])->name('destination.update');
     Route::delete('/admin/destinations/delete/{id}', [App\Http\Controllers\DestinationController::class, 'destroy'])->name('destination.destroy');
+    Route::get('/adminFestival', [App\Http\Controllers\FestivalController::class, 'adminFestivalView'])->name('adminFestival');
+    Route::post('/storeFestival', [App\Http\Controllers\FestivalController::class, 'store'])->name('storeFestival');
+    Route::put('/admin/festival/update/{id}', [App\Http\Controllers\FestivalController::class, 'update'])->name('festival.update');
+    Route::delete('/admin/festival/delete/{id}', [App\Http\Controllers\FestivalController::class, 'destroy'])->name('festival.destroy');
+    Route::get('/addFestivals', [App\Http\Controllers\FestivalController::class, 'addFestivalView'])->name('addFestival');
+    Route::get('/adminDocumentaries', [App\Http\Controllers\DocumentariesController::class, 'adminDocumentariesView'])->name('addDocumentaries');
+    Route::put('/admin/documentary/update/{id}',[App\Http\Controllers\DocumentariesController::class,'update'])->name('documentary.update');
+    Route::delete('/admin/documentary/delete/{id}',[App\Http\Controllers\DocumentariesController::class,'destroy'])->name('documentary.destroy');
+    Route::post('/storeDocumentary',[App\Http\Controllers\DocumentariesController::class,'store'])->name('storeDocumentaries');
+    Route::get('/addDocumentaries',[App\Http\Controllers\DocumentariesController::class,'addDocumentariesView'])->name('addDocumentaries');
 });
 

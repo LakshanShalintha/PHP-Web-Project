@@ -49,8 +49,10 @@
                     <li class="nav-item"><a class="nav-link" href="{{ url('/addDestination') }}">Add Destination</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/adminAccommodationsView')}}">Accommodations</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/addAccommodations')}}">Add Accommodations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/festival')}}">Festival</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/documentaries')}}">Documentaries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/adminFestival')}}">Festival</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/addFestivals')}}">Add Festival</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/adminDocumentaries')}}">Documentaries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/addDocumentaries')}}">Add Documentaries</a></li>
                     {{--<li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>--}}
 
                     <!-- Authentication Links -->
