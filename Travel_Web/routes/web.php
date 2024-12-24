@@ -54,5 +54,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::delete('/admin/documentary/delete/{id}',[App\Http\Controllers\DocumentariesController::class,'destroy'])->name('documentary.destroy');
     Route::post('/storeDocumentary',[App\Http\Controllers\DocumentariesController::class,'store'])->name('storeDocumentaries');
     Route::get('/addDocumentaries',[App\Http\Controllers\DocumentariesController::class,'addDocumentariesView'])->name('addDocumentaries');
+    Route::get('/addPlan',[App\Http\Controllers\PlanController::class,'addPlanView'])->name('addPlan');
 });
 

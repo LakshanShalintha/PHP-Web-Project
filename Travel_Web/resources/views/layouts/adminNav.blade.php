@@ -53,6 +53,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{url('/addFestivals')}}">Add Festival</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/adminDocumentaries')}}">Documentaries</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/addDocumentaries')}}">Add Documentaries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/addPlan')}}">Add Plan</a></li>
                     {{--<li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>--}}
 
                     <!-- Authentication Links -->
