@@ -55,5 +55,9 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::post('/storeDocumentary',[App\Http\Controllers\DocumentariesController::class,'store'])->name('storeDocumentaries');
     Route::get('/addDocumentaries',[App\Http\Controllers\DocumentariesController::class,'addDocumentariesView'])->name('addDocumentaries');
     Route::get('/addPlan',[App\Http\Controllers\PlanController::class,'addPlanView'])->name('addPlan');
+    Route::get('/adminPlan', [App\Http\Controllers\PlanController::class, 'adminPlanView'])->name('adminPlan');
+    Route::put('/admin/plans/update/{id}',[App\Http\Controllers\PlanController::class,'update'])->name('plan.update');
+    Route::delete('/admin/plans/delete/{id}',[App\Http\Controllers\PlanController::class,'destroy'])->name('plan.destroy');
+    Route::post('/storePlans',[App\Http\Controllers\PlanController::class,'store'])->name('storePlan');
 });
 
