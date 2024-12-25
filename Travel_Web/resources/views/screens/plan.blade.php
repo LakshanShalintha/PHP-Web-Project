@@ -71,22 +71,22 @@
         <h3 class="text-center">Plane Your Journey</h3>
         <div class="container">
             <div class="row justify-content-center">
-{{--                @foreach($accommodations as $acc)--}}
+                @foreach($plan as $plan)
                     <!-- Accommodation Cards -->
                     <div class="col-md-4 d-flex justify-content-center">
                         <div class="card accommodation-card">
-{{--                            <img src="{{ asset('image/' . $acc->image) }}" class="card-img-top" alt="{{ $acc->name }}">--}}
+                            <img src="{{ asset('image/' . $plan->image) }}" class="card-img-top" alt="{{ $plan->name }}">
                             <div class="rating-badge">
                                 <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
                             </div>
                             <div class="card-body">
-{{--                                <h5 class="card-title">{{ $acc->name }}</h5>--}}
-{{--                                <p class="card-text">{{ $acc->location }}</p>--}}
-{{--                                <p class="card-price">{{ $acc->price }} Rs. / Per Night</p>--}}
+                                <h5 class="card-title">{{ $plan->name }}</h5>
+                                <p class="card-text">{{ $plan->location }}</p>
+                                <p class="card-price">{{ $plan->price }} Rs. / Per Night</p>
                             </div>
                         </div>
                     </div>
-{{--                @endforeach--}}
+                @endforeach
             </div>
         </div>
     </section>
