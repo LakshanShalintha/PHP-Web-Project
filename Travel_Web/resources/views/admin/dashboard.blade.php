@@ -43,8 +43,9 @@
             }
 
             .card {
-                border-radius: 20px;
+                border-radius: 15px;
                 box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                text-align: center;
             }
 
             .card-title {
@@ -148,43 +149,58 @@
                 </div>
 
                 <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Reviewed</h5>
-                            <div class="circle-chart">
-                                <canvas id="reviewedChart"></canvas>
-                                <div class="percentage">412</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Logged</h5>
-                            <div class="circle-chart">
-                                <canvas id="loggedChart"></canvas>
-                                <div class="percentage">350</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Singed In</h5>
-                            <div class="circle-chart">
-                                <canvas id="singedInChart"></canvas>
-                                <div class="percentage">172</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Engaged</h5>
-                            <div class="circle-chart">
-                                <canvas id="engagedChart"></canvas>
-                                <div class="percentage">59</div>
+                    <div class="col-12">
+                        <!-- Shared Background Container -->
+                        <div class="p-4" style="background-color: #ffffff; border-radius: 15px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                            <div class="row">
+                                <!-- Reviewed Card -->
+                                <div class="col-md-3">
+                                    <div class="text-center p-4">
+                                        <h5 class="card-title">Reviewed</h5>
+                                        <div class="circle-chart">
+                                            <canvas id="reviewedChart"></canvas>
+                                            <div class="percentage">412</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Logged Card -->
+                                <div class="col-md-3">
+                                    <div class="text-center p-4">
+                                        <h5 class="card-title">Logged</h5>
+                                        <div class="circle-chart">
+                                            <canvas id="loggedChart"></canvas>
+                                            <div class="percentage">350</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Signed In Card -->
+                                <div class="col-md-3">
+                                    <div class="text-center p-4">
+                                        <h5 class="card-title">Signed In</h5>
+                                        <div class="circle-chart">
+                                            <canvas id="singedInChart"></canvas>
+                                            <div class="percentage">172</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Engaged Card -->
+                                <div class="col-md-3">
+                                    <div class="text-center p-4">
+                                        <h5 class="card-title">Engaged</h5>
+                                        <div class="circle-chart">
+                                            <canvas id="engagedChart"></canvas>
+                                            <div class="percentage">59</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="row">
                     <div class="col-md-3">
@@ -251,7 +267,7 @@
                     datasets: [{
                         data: [data, 100 - data],
                         backgroundColor: [color, '#e0e0e0'],
-                        borderWidth: 0,
+                        borderWidth: 2,
                     }]
                 },
                 options: {
