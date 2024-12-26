@@ -44,7 +44,10 @@ body {
 .recommend-section h2,
 .accommodations-section h3,
 .trending-section h3 {
-    margin-bottom: 20px;
+    margin-bottom: -20px;
+    font-family: 'Montserrat', serif; /* Change font family */
+    font-size: 3rem; /* Change font size */
+    color: #333; /* Change text color */
 }
 
 .accommodations-section .card,

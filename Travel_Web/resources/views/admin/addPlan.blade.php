@@ -4,7 +4,7 @@
 
     <section class="add_accommodations-section">
         <div class="container">
-            <h1>Create Plan</h1>
+            <h1>Add New Plan</h1>
 
             <!-- Success or Error Message -->
             @if (session('success'))

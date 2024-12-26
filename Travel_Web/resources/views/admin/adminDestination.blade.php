@@ -2,20 +2,30 @@
 
 @section('content')
 
+    <section class="text-center mt-5">
+            <h2>Exploring the Best
+                Destinations</h2>
+    </section>
+
+
     <section class="destinations-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 @foreach($destinations as $destination)
-                    <div class="col-md-4 d-flex justify-content-center mb-4">
-                        <div class="card shadow-sm">
-                            <img src="{{ asset('image/' . $destination->image) }}" class="card-img-top" alt="{{ $destination->title }}">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="{{ asset('image/' . $destination->image) }}"
+                                 class="card-img-top"
+                                 alt="{{ $destination->name }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $destination->title }}</h5>
-                                <p class="card-text">{{ Str::limit($destination->description, 100) }}</p>
+                                <p class="card-text">{{ $destination->description }}</p>
                                 <div class="d-flex justify-content-between">
                                     <!-- Update Button -->
-                                    <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#updateModal{{ $destination->id }}">
-                                        <i class="fas fa-edit"></i>Update
+                                    <button type="button" class="btn btn-primary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#updateModal{{ $destination->id }}">
+                                        <i class="fas fa-edit"></i> Update
                                     </button>
                                     <form action="{{ route('destination.destroy', $destination->id) }}" method="POST" class="d-inline">
                                         @csrf
@@ -30,7 +40,8 @@
                     </div>
 
                     <!-- Update Modal -->
-                    <div class="modal fade" id="updateModal{{ $destination->id }}" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel{{ $destination->id }}" aria-hidden="true">
+                    <div class="modal fade" id="updateModal{{ $destination->id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="updateModalLabel{{ $destination->id }}" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -56,7 +67,8 @@
 
                                         <div class="form-group">
                                             <label for="title" class="form-label">Title</label>
-                                            <input type="text" class="form-control" id="title" name="title" value="{{ $destination->title }}" required>
+                                            <input type="text" class="form-control" id="title" name="title"
+                                                   value="{{ $destination->title }}" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="description" class="form-label">Description</label>
@@ -74,11 +86,11 @@
                         </div>
                     </div>
                     <!-- End Update Modal -->
-
                 @endforeach
             </div>
         </div>
     </section>
+
 
 
     <!-- Include Bootstrap JS and Popper.js for Bootstrap 4 -->

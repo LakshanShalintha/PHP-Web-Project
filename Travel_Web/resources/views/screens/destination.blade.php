@@ -95,24 +95,6 @@
                                     </div>
                                 </div>
                             @endforeach
-                            {{--                        <div class="col-md-4">--}}
-                            {{--                            <div class="card">--}}
-                            {{--                                <img src="{{ asset('images/n_archCard.png') }}" class="card-img-top" alt="Nine Arch Bridge">--}}
-                            {{--                                <div class="card-body">--}}
-                            {{--                                    <h5 class="card-title">Nine Arch Bridge</h5>--}}
-                            {{--                                    <p class="card-text">The Nine Arch Bridge is a stunning feat of colonial-era engineering nestled amidst lush greenery.</p>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
-                            {{--                        </div>--}}
-                            {{--                        <div class="col-md-4">--}}
-                            {{--                            <div class="card">--}}
-                            {{--                                <img src="{{ asset('images/ambuluwawa.png') }}" class="card-img-top" alt="Ambuluwawa Tower">--}}
-                            {{--                                <div class="card-body">--}}
-                            {{--                                    <h5 class="card-title">Ambuluwawa Tower</h5>--}}
-                            {{--                                    <p class="card-text">Ambuluwawa Tower in Gampola, Sri Lanka, is a striking multi-tiered structure offering panoramic views.</p>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
-                            {{--                        </div>--}}
                         </div>
                     </div>
                     <!-- Add more carousel items here for more destinations -->
