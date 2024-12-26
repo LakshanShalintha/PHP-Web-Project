@@ -71,7 +71,7 @@
     <!-- Recommend Section -->
     <section class="recommend-section text-center py-5">
         <div class="container">
-            <h2>Home Sweet Home</h2>
+            <h2 class="mb-2">Home Sweet Home</h2>
             <div class="btn-group mt-4" role="group" aria-label="Basic example">
                 <button type="button" class="btn custom-btn active">Accommodations</button>
                 <button type="button" class="btn custom-btn" onclick="window.location='{{ route('restaurants') }}'">
@@ -84,7 +84,7 @@
 
     <!-- Accommodations Section -->
     <section class="accommodations-section py-5">
-        <h3 class="text-center">Accommodations</h3>
+        <h3 class="text-center mb-2">Accommodations</h3>
         <div class="container">
             <div class="row justify-content-center">
                 @foreach($accommodations as $acc)
@@ -111,7 +111,7 @@
 
     <!-- Popular / Trending Section -->
     <section class="trending-section py-5">
-        <h3 class="text-center">Popular / Trending</h3>
+        <h3 class="text-center mb-2">Popular / Trending</h3>
         <div class="container">
             <div class="row justify-content-center">
                 <!-- Trending Cards -->
