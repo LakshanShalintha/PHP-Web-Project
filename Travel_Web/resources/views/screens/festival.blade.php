@@ -74,10 +74,10 @@
     </section>
 
     <main>
-        <div class="container my-5">
-            <div class="card custom-card">
-                <div class="row no-gutters">
-                    @foreach($festival as $festival)
+        @foreach($festival as $festival)
+            <div class="container my-5">
+                <div class="card custom-card">
+                    <div class="row no-gutters">
                         <div class="col-md-4">
                             <img src="{{ asset('image/'.$festival->image) }}" class="card-img"
                                  alt={{$festival->title}}>
@@ -92,10 +92,11 @@
                                 </p>
                             </div>
                         </div>
-                    @endforeach
+
+                    </div>
                 </div>
             </div>
-        </div>
+        @endforeach
     </main>
 
 @endsection
