@@ -23,6 +23,7 @@
     <link href="{{ asset('css/admin_css/addAccommodations.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin_css/adminAccommodations.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin_css/adminDestination.css') }}" rel="stylesheet">
+    <link href="{{asset('css/festival.css')}}" rel="stylesheet">
 
 
     <!-- Include jQuery -->
