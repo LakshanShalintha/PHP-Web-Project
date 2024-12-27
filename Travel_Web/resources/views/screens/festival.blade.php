@@ -66,6 +66,13 @@
         </div>
     </header>
 
+    <!-- Recommend Section -->
+    <section class="recommend-section text-center py-5">
+        <div class="container">
+            <h2>Festival / Events</h2>
+        </div>
+    </section>
+
     <main>
         <div class="container my-5">
             <div class="card custom-card">
