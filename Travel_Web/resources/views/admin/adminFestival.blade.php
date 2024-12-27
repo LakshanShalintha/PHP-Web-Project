@@ -1,11 +1,14 @@
 @extends('layouts.adminNav')
 @section('content')
-    <section class="destinations-section py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="card custom-card">
-                    <div class="row no-gutters">
-                        @foreach($festival as $festival)
+    <section class="text-center mt-5">
+        <h2>Festivals</h2>
+    </section>
+    <section class="destinations-section py-3">
+        @foreach($festival as $festival)
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="card custom-card mb-5">
+                        <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img src="{{ asset('image/'.$festival->image) }}" class="card-img"
                                      alt={{$festival->title}}>
@@ -98,12 +101,11 @@
                                 </div>
                             </div>
                             <!-- End Update Modal -->
-
-                        @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endforeach
     </section>
 
 

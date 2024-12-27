@@ -3,8 +3,7 @@
 @section('content')
 
     <section class="text-center mt-5">
-            <h2>Exploring the Best
-                Destinations</h2>
+        <h2>Destinations</h2>
     </section>
 
 
@@ -27,7 +26,8 @@
                                             data-bs-target="#updateModal{{ $destination->id }}">
                                         <i class="fas fa-edit"></i> Update
                                     </button>
-                                    <form action="{{ route('destination.destroy', $destination->id) }}" method="POST" class="d-inline">
+                                    <form action="{{ route('destination.destroy', $destination->id) }}" method="POST"
+                                          class="d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">
@@ -45,13 +45,15 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="updateModalLabel{{ $destination->id }}">Update Destination</h5>
+                                    <h5 class="modal-title" id="updateModalLabel{{ $destination->id }}">Update
+                                        Destination</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="{{ route('destination.update', $destination->id) }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('destination.update', $destination->id) }}" method="POST"
+                                          enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
 
@@ -72,12 +74,14 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="description" class="form-label">Description</label>
-                                            <textarea class="form-control" id="description" name="description" required>{{ $destination->description }}</textarea>
+                                            <textarea class="form-control" id="description" name="description"
+                                                      required>{{ $destination->description }}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="image" class="form-label">Image</label>
                                             <input type="file" class="form-control-file" id="image" name="image">
-                                            <small class="form-text text-muted">Leave empty to keep the current image.</small>
+                                            <small class="form-text text-muted">Leave empty to keep the current
+                                                image.</small>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Update</button>
                                     </form>
