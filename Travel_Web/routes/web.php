@@ -48,7 +48,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::post('/storeFestival', [App\Http\Controllers\FestivalController::class, 'store'])->name('storeFestival');
     Route::put('/admin/festival/update/{id}', [App\Http\Controllers\FestivalController::class, 'update'])->name('festival.update');
     Route::delete('/admin/festival/delete/{id}', [App\Http\Controllers\FestivalController::class, 'destroy'])->name('festival.destroy');
-    Route::get('/addFestivals', [App\Http\Controllers\FestivalController::class, 'addFestivalView'])->name('addFestival');
+    Route::get('/addFestivals', [App\Http\Controllers\FestivalController::class, 'addFestivalView'])->name('addFestivals');
     Route::get('/adminDocumentaries', [App\Http\Controllers\DocumentariesController::class, 'adminDocumentariesView'])->name('addDocumentaries');
     Route::put('/admin/documentary/update/{id}',[App\Http\Controllers\DocumentariesController::class,'update'])->name('documentary.update');
     Route::delete('/admin/documentary/delete/{id}',[App\Http\Controllers\DocumentariesController::class,'destroy'])->name('documentary.destroy');

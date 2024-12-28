@@ -68,27 +68,24 @@
     </header>
 
     <section class="accommodations-section py-5">
-        <h3 class="text-center">Plane Your Journey</h3>
-        <div class="container">
-            <div class="row justify-content-center">
-                @foreach($plan as $plan)
-                    <!-- Accommodation Cards -->
-                    <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card accommodation-card">
-                            <img src="{{ asset('image/' . $plan->image) }}" class="card-img-top" alt="{{ $plan->name }}">
-                            <div class="rating-badge">
-                                <span class="badge badge-dark"><i class="fas fa-star"></i> 4.7 (283)</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $plan->name }}</h5>
-                                <p class="card-text">{{ $plan->location }}</p>
-                                <p class="card-price">{{ $plan->price }} Rs. / Per Night</p>
-                            </div>
-                        </div>
+        <h3 class="text-center mb-5">Plane Your Journey</h3>
+        @foreach($plan as $plan)
+            <!-- Trending Cards -->
+            <div class="col-md-12 d-flex justify-content-center mb-4">
+                <div class="card trending-card">
+                    <img src="{{ asset('image/'.$plan->image) }}" alt="{{ $plan->title }}">
+                    <div class="overlay"></div>
+                    <div class="rating-badge">
+                        <span class="badge"><i class="fas fa-sync"></i> {{ $plan->status }}</span>
                     </div>
-                @endforeach
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $plan->title }}</h5>
+                        <p class="card-text">{{ $plan->status }}</p>
+                        <p class="card-price">{{ $plan->start_date }}-{{ $plan->start_date }}</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        @endforeach
     </section>
 
 @endsection

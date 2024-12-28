@@ -9,7 +9,8 @@ class DocumentariesController extends Controller
 {
     public function documentariesView()
     {
-        return view('screens.documentaries');
+        $documentaries=Documentary::all();
+        return view('screens.documentaries',compact('documentaries'));
     }
 
     public function adminDocumentariesView()
@@ -59,7 +60,7 @@ class DocumentariesController extends Controller
         if ($request->hasFile('image')) {
             $filename = time() . '.' . $request->image->extension();
             $request->image->move(public_path('image'), $filename);
-            $date['image'] = $filename;
+            $data['image'] = $filename;
         }
 
         $documentaries->update($data);
