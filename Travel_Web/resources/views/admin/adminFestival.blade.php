@@ -1,8 +1,21 @@
 @extends('layouts.adminNav')
 @section('content')
-    <section class="text-center mt-5">
-        <h2>Festivals</h2>
-    </section>
+    <div class="container mt-5">
+        <div class="row position-relative mb-4">
+            <div class="col-12 text-center">
+                <h2 class="mb-0">Festival</h2>
+            </div>
+            <div class="position-absolute" style="right: 0;">
+                <button class="btn btn-dark custom-button d-flex align-items-center px-3 py-2"
+                        onclick="window.location.href='{{ route('addFestivals') }}'">
+                    <span class="me-2 px-2">Add New</span>
+                    <span class="icon-container d-flex align-items-center justify-content-center">
+        <i class="fas fa-plus"></i>
+    </span>
+                </button>
+            </div>
+        </div>
+    </div>
     <section class="destinations-section py-3">
         @foreach($festival as $festival)
             <div class="container">

@@ -17,14 +17,13 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
-
     <link href="{{ asset('css/admin_css/admin_layout.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin_css/addAccommodations.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin_css/adminAccommodations.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin_css/adminDestination.css') }}" rel="stylesheet">
-    <link href="{{asset('css/festival.css')}}" rel="stylesheet">
-
+    <link href="{{ asset('css/admin_css/addButton.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin_css/dashboard.css') }}" rel="stylesheet">
+    <link href="{{asset('css/documentaries.css')}}" rel="stylesheet">
 
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -37,28 +36,25 @@
 
 <header class="header">
     <div class="overlay">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark mt-2">
             <a class="navbar-brand" href="#">TRAVLO</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <!-- Centered navigation links -->
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/adminDestination')}}">Destination</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/addDestination') }}">Add Destination</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/adminAccommodationsView')}}">Accommodations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/addAccommodations')}}">Add Accommodations</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/adminFestival')}}">Festival</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/addFestivals')}}">Add Festival</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/adminDocumentaries')}}">Documentaries</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/addDocumentaries')}}">Add Documentaries</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/addPlan')}}">Add Plan</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/adminPlan')}}">Plan</a></li>
-                    {{--<li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>--}}
+                </ul>
 
-                    <!-- Authentication Links -->
+                <!-- Authentication Links -->
+                <ul class="navbar-nav">
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
@@ -93,7 +89,8 @@
                                 </form>
                             </div>
                         </li>
-                @endguest
+                    @endguest
+                </ul>
             </div>
         </nav>
         <main>
@@ -101,6 +98,7 @@
         </main>
     </div>
 </header>
+
 
 <script>
     // Update the file input label with the selected file name

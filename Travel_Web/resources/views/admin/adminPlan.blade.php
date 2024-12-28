@@ -1,5 +1,22 @@
 @extends('layouts.adminNav')
 @section('content')
+    <div class="container mt-5">
+        <div class="row position-relative mb-4">
+            <div class="col-12 text-center">
+                <h2 class="mb-0">Plan</h2>
+            </div>
+            <div class="position-absolute" style="right: 0;">
+                <button class="btn btn-dark custom-button d-flex align-items-center px-3 py-2"
+                        onclick="window.location.href='{{ route('addPlan') }}'">
+                    <span class="me-2 px-2">Add New</span>
+                    <span class="icon-container d-flex align-items-center justify-content-center">
+        <i class="fas fa-plus"></i>
+    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <section class="destinations-section py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -68,17 +85,17 @@
                                         <div class="form-group">
                                             <label for="status" class="form-label">Status</label>
                                             <input type="text" class="form-control" id="status" name="status"
-                                                      required>{{ $plan->status }}
+                                                   required>{{ $plan->status }}
                                         </div>
                                         <div class="form-group">
                                             <label for="start_date" class="form-label">Start Date</label>
                                             <input type="date" class="form-control" id="start_date" name="start_date"
-                                                      required>{{ $plan->start_date }}
+                                                   required>{{ $plan->start_date }}
                                         </div>
                                         <div class="form-group">
                                             <label for="end_date" class="form-label">End Date</label>
                                             <input type="date" class="form-control" id="end_date" name="end_date"
-                                                      required>{{ $plan->end_date }}
+                                                   required>{{ $plan->end_date }}
                                         </div>
                                         <div class="form-group">
                                             <label for="image" class="form-label">Image</label>

@@ -1,30 +1,56 @@
 @extends('layouts.adminNav')
 @section('content')
+
+    <div class="container mt-5">
+        <div class="row position-relative mb-4">
+            <div class="col-12 text-center">
+                <h2 class="mb-0">Documentaries</h2>
+            </div>
+            <div class="position-absolute" style="right: 0;">
+                <button class="btn btn-dark custom-button d-flex align-items-center px-3 py-2"
+                        onclick="window.location.href='{{ route('addDocumentaries') }}'">
+                    <span class="me-2 px-2">Add New</span>
+                    <span class="icon-container d-flex align-items-center justify-content-center">
+        <i class="fas fa-plus"></i>
+    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <section class="destinations-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 @foreach($documentaries as $documentaries)
-                    <div class="col-md-4 d-flex justify-content-center mb-4">
-                        <div class="card shadow-sm">
-                            <img src="{{ asset('image/' . $documentaries->image) }}" class="card-img-top"
-                                 alt="{{ $documentaries->title }}">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $documentaries->title }}</h5>
-                                <p class="card-text">{{ Str::limit($documentaries->description, 100) }}</p>
-                                <div class="d-flex justify-content-between">
-                                    <!-- Update Button -->
-                                    <button type="button" class="btn btn-primary " data-bs-toggle="modal"
-                                            data-bs-target="#updateModal{{ $documentaries->id }}">
-                                        <i class="fas fa-edit"></i>Update
-                                    </button>
-                                    <form action="{{ route('documentary.destroy', $documentaries->id) }}" method="POST"
-                                          class="d-inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i> Delete
+                    <div class="card custom-card mb-5">
+                        <div class="row no-gutters">
+                            <div class="col-md-5">
+                                <img src="{{ asset('image/'.$documentaries->image) }}" class="card-img"
+                                     alt="The Temple of Tooth">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$documentaries->title}}</h5>
+                                    <p class="card-text">
+                                        {{$documentaries->description}}
+                                    </p>
+{{--                                    <a href="#" class="btn btn-dark">Read More... →</a>--}}
+                                    <div class="d-flex justify-content-between">
+                                        <!-- Update Button -->
+                                        <button type="button" class="btn btn-primary " data-bs-toggle="modal"
+                                                data-bs-target="#updateModal{{ $documentaries->id }}">
+                                            <i class="fas fa-edit"></i>Update
                                         </button>
-                                    </form>
+                                        <form action="{{ route('documentary.destroy', $documentaries->id) }}"
+                                              method="POST"
+                                              class="d-inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i> Delete
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +73,6 @@
                                           enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
-
                                         @if($errors->any())
                                             <div class="alert alert-danger" role="alert">
                                                 <ul class="mb-0">
@@ -57,7 +82,6 @@
                                                 </ul>
                                             </div>
                                         @endif
-
                                         <div class="form-group">
                                             <label for="title" class="form-label">Title</label>
                                             <input type="text" class="form-control" id="title" name="title"
@@ -81,7 +105,6 @@
                         </div>
                     </div>
                     <!-- End Update Modal -->
-
                 @endforeach
             </div>
         </div>
