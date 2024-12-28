@@ -24,6 +24,12 @@
                             <p class="text-success">+30%</p>
                             <!-- Insert a chart here if necessary -->
                         </div>
+                        <div class="card-dash p-4 mt-4">
+                            <h5 class="card-title">Log In</h5>
+                            <h2>27</h2>
+                            <p class="text-success">+30%</p>
+                            <!-- Insert a chart here if necessary -->
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card-dash p-4">
@@ -80,7 +86,7 @@
                                         <h5 class="card-title">Destinations</h5>
                                         <div class="circle-chart">
                                             <canvas id="reviewedChart"></canvas>
-                                            <div class="percentage">412</div>
+                                            <div class="percentage">5</div>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +97,7 @@
                                         <h5 class="card-title">Festivals</h5>
                                         <div class="circle-chart">
                                             <canvas id="loggedChart"></canvas>
-                                            <div class="percentage">350</div>
+                                            <div class="percentage">4</div>
                                         </div>
                                     </div>
                                 </div>
@@ -102,7 +108,7 @@
                                         <h5 class="card-title">Accommodations</h5>
                                         <div class="circle-chart">
                                             <canvas id="signedInChart"></canvas>
-                                            <div class="percentage">172</div>
+                                            <div class="percentage">3</div>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +119,7 @@
                                         <h5 class="card-title">Documents</h5>
                                         <div class="circle-chart">
                                             <canvas id="engagedChart"></canvas>
-                                            <div class="percentage">59</div>
+                                            <div class="percentage">2</div>
                                         </div>
                                     </div>
                                 </div>

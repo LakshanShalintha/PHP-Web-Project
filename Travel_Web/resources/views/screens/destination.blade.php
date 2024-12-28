@@ -113,46 +113,46 @@
 
 
     <!-- Destinations Section -->
-    <section class="destinations-section2 py-5">
-        <div class="container">
-            <div class="row">
-                <div class="container">
-                    <div class="card col-md-6 mb-4">
-                        <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end">
-                            <h5 class="card-title">Gall Fort</h5>
-                            <p class="card-text">More Details...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end">
-                            <h5 class="card-title">Gall Fort</h5>
-                            <p class="card-text">More Details...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="card col-md-6 mb-4">
-                        <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end">
-                            <h5 class="card-title">Gall Fort</h5>
-                            <p class="card-text">More Details...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="card col-md-6 mb-4">
-                        <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end">
-                            <h5 class="card-title">Gall Fort</h5>
-                            <p class="card-text">More Details...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="destinations-section2 py-5">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="container">--}}
+{{--                    <div class="card col-md-6 mb-4">--}}
+{{--                        <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">--}}
+{{--                        <div class="card-img-overlay d-flex flex-column justify-content-end">--}}
+{{--                            <h5 class="card-title">Gall Fort</h5>--}}
+{{--                            <p class="card-text">More Details...</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-6 mb-4">--}}
+{{--                    <div class="card">--}}
+{{--                        <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">--}}
+{{--                        <div class="card-img-overlay d-flex flex-column justify-content-end">--}}
+{{--                            <h5 class="card-title">Gall Fort</h5>--}}
+{{--                            <p class="card-text">More Details...</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="container">--}}
+{{--                    <div class="card col-md-6 mb-4">--}}
+{{--                        <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">--}}
+{{--                        <div class="card-img-overlay d-flex flex-column justify-content-end">--}}
+{{--                            <h5 class="card-title">Gall Fort</h5>--}}
+{{--                            <p class="card-text">More Details...</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="container">--}}
+{{--                    <div class="card col-md-6 mb-4">--}}
+{{--                        <img src="{{ asset('images/gall_port.png') }}" class="card-img-top" alt="Gall Fort">--}}
+{{--                        <div class="card-img-overlay d-flex flex-column justify-content-end">--}}
+{{--                            <h5 class="card-title">Gall Fort</h5>--}}
+{{--                            <p class="card-text">More Details...</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 @endsection

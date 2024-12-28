@@ -33,6 +33,11 @@ label {
     border-color: #393939;
 }
 
+.btn-danger {
+    background-color: #671c1c;
+    border-color: #671c1c;
+}
+
 .custom-file-label::after {
     content: "Browse";
 }
@@ -71,8 +76,24 @@ input[type="file"] {
     margin-right: 10px;
 }
 
+.btn-danger {
+    width: 145px;
+    height: 50px;
+    margin-left: 10px;
+    padding: 12px;
+    background-color: #df0000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
 .btn-primary {
     width: 100%;
+    height: 50px;
     padding: 12px;
     background-color: black;
     color: white;
@@ -86,6 +107,10 @@ input[type="file"] {
 
 .btn-primary:hover {
     background-color: #333;
+    transform: translateY(-2px);
+}
+
+.btn-danger:hover {
     transform: translateY(-2px);
 }
 
