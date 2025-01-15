@@ -1,0 +1,66 @@
+/*body {*/
+/*    background-color: #f5f5f5;*/
+/*}*/
+
+.sidebar {
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.card-dash {
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.circle-chart {
+    position: relative;
+    margin: 20px 0;
+}
+
+.circle-chart:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.circle-chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 24px;
+}

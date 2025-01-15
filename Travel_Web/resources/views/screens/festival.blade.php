@@ -17,6 +17,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/festival')}}">Festival</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/documentaries')}}">Documentaries</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/plan') }}">Plan</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/contactus') }}">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/aboutUs') }}">About</a></li>
 
@@ -65,28 +66,36 @@
         </div>
     </header>
 
+    <!-- Recommend Section -->
+    <section class="recommend-section text-center py-5">
+        <div class="container">
+            <h2>Festival / Events</h2>
+        </div>
+    </section>
+
     <main>
-        <div class="container my-5">
-            <div class="card custom-card">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="{{ asset('images/dalada_perahera.png') }}"  class="card-img" alt="Sri Daladha Perahera">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Sri Daladha Perahera</h5>
-                            <p class="card-text"><small class="text-muted">Kandy | Sri Lanka</small></p>
-                            <p class="card-text">
-                                Sri Dalada Maligawa, also known as the Temple of the Sacred Tooth Relic, is a revered site in Kandy, Sri Lanka.
-                                Housing the relic of the Buddha's tooth, it's a symbol of the island's rich spiritual heritage. Surrounded by
-                                lush greenery and adorned with intricate carvings, the temple attracts pilgrims and tourists alike, offering a
-                                glimpse into Sri Lanka's profound cultural legacy.
-                            </p>
+        @foreach($festival as $festival)
+            <div class="container my-5">
+                <div class="card custom-card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ asset('image/'.$festival->image) }}" class="card-img"
+                                 alt={{$festival->title}}>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$festival->title}}</h5>
+                                <p class="card-text"><small class="text-muted">{{$festival->location}}
+                                        | {{$festival->country}}</small></p>
+                                <p class="card-text">
+                                    {{$festival->description}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endforeach
     </main>
 
 @endsection

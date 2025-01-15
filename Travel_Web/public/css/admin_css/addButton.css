@@ -1,0 +1,20 @@
+.custom-button {
+    font-size: 16px; /* Adjust text size */
+    border-radius: 15px;
+    background-color: black;
+
+}
+
+.icon-container {
+    background-color: #fff; /* White background for the icon circle */
+    color: #000; /* Black icon color */
+    width: 24px; /* Width of the circle */
+    height: 24px; /* Height of the circle */
+    border-radius: 25%; /* Makes it a circle */
+    display: inline-flex; /* Ensures proper alignment */
+    justify-content: center; /* Centers the icon horizontally */
+    align-items: center; /* Centers the icon vertically */
+    font-size: 14px; /* Icon size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for a subtle effect */
+}
+

@@ -1,90 +1,9 @@
 @extends('layouts.adminNav')
 @section('content')
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <style>
-
-            body {
-                background-color: #f5f5f5;
-            }
-
-            .sidebar {
-                height: 100%;
-                background-color: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                position: absolute; /* or fixed depending on your layout */
-                top: 0;
-                bottom: 0;
-            }
-
-
-            .sidebar a {
-                color: #000;
-                text-decoration: none;
-                display: block;
-                margin-bottom: 15px;
-                padding: 10px;
-                border-radius: 8px;
-            }
-
-            .sidebar a:hover,
-            .sidebar a.active {
-                background-color: #000;
-                color: #fff;
-            }
-
-            .main-content {
-                padding: 20px;
-            }
-
-            .card {
-                border-radius: 20px;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            }
-
-            .card-title {
-                font-weight: bold;
-            }
-
-            .circle-chart {
-                position: relative;
-                margin: 20px 0;
-            }
-
-            .circle-chart:before {
-                content: "";
-                display: block;
-                padding-top: 100%;
-            }
-
-            .circle-chart canvas {
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-
-            .percentage {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-weight: bold;
-                font-size: 24px;
-            }
-
-        </style>
-    </head>
-
-    <body>
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav class="col-md-2 d-none d-md-block sidebar">
+            <nav class="col-md-2 d-none d-md-block sidebar mt-2">
                 <div class="d-flex flex-column">
                     <h3>Dashboard</h3>
                     <a href="#" class="active">Users</a>
@@ -93,20 +12,28 @@
                 </div>
             </nav>
 
+            <div class="col-md-1"></div>
+
             <!-- Main Content -->
-            <main class="col-md-10 ms-sm-auto px-md-4 main-content">
+            <main class="col-md-9 offset-md-2 main-content">
                 <div class="row mb-4">
                     <div class="col-md-6">
-                        <div class="card p-4">
+                        <div class="card-dash p-4">
                             <h5 class="card-title">Visited</h5>
                             <h2>2780</h2>
                             <p class="text-success">+30%</p>
                             <!-- Insert a chart here if necessary -->
                         </div>
+                        <div class="card-dash p-4 mt-4">
+                            <h5 class="card-title">Log In</h5>
+                            <h2>27</h2>
+                            <p class="text-success">+30%</p>
+                            <!-- Insert a chart here if necessary -->
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="card p-4">
-                            <h5 class="card-title">Top Singed</h5>
+                        <div class="card-dash p-4">
+                            <h5 class="card-title">Top Signed</h5>
                             <table class="table">
                                 <thead>
                                 <tr>
@@ -148,88 +75,52 @@
                 </div>
 
                 <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Reviewed</h5>
-                            <div class="circle-chart">
-                                <canvas id="reviewedChart"></canvas>
-                                <div class="percentage">412</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Logged</h5>
-                            <div class="circle-chart">
-                                <canvas id="loggedChart"></canvas>
-                                <div class="percentage">350</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Singed In</h5>
-                            <div class="circle-chart">
-                                <canvas id="singedInChart"></canvas>
-                                <div class="percentage">172</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Engaged</h5>
-                            <div class="circle-chart">
-                                <canvas id="engagedChart"></canvas>
-                                <div class="percentage">59</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card p-4">
-                            <h5 class="card-title">Gender</h5>
-                            <h1 class="card-title">Male</h1>
-                            <div class="circle-chart">
-                                <canvas id="maleChart"></canvas>
-                                <div class="percentage">412</div>
-                            </div>
-                            <h1 class="card-title">Female</h1>
-                            <div class="circle-chart">
-                                <canvas id="femaleChart"></canvas>
-                                <div class="percentage">350</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3"></div>
-                    <div class="col-md-6">
-                        <div class="card p-4">
+                    <div class="col-12">
+                        <!-- Shared Background Container -->
+                        <div class="p-4"
+                             style="background-color: #ffffff; border-radius: 15px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
                             <div class="row">
-                                <div class="col-md-6">
-                                    <h5 class="card-title">Age</h5>
-                                    <h1 class="card-title">Under 18</h1>
-                                    <div class="circle-chart">
-                                        <canvas id="ageChart18"></canvas>
-                                        <div class="percentage">172</div>
-                                    </div>
-                                    <h1 class="card-title">Under 18</h1>
-                                    <div class="circle-chart">
-                                        <canvas id="ageChart18-25"></canvas>
-                                        <div class="percentage">172</div>
+                                <!-- Reviewed Card -->
+                                <div class="col-md-3">
+                                    <div class="text-center p-4">
+                                        <h5 class="card-title">Destinations</h5>
+                                        <div class="circle-chart">
+                                            <canvas id="reviewedChart"></canvas>
+                                            <div class="percentage">5</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <h5 class="card-title"> '</h5>
-                                    <h1 class="card-title">Under 18</h1>
-                                    <div class="circle-chart">
-                                        <canvas id="ageChart25-60"></canvas>
-                                        <div class="percentage">172</div>
+
+                                <!-- Logged Card -->
+                                <div class="col-md-3">
+                                    <div class="text-center p-4">
+                                        <h5 class="card-title">Festivals</h5>
+                                        <div class="circle-chart">
+                                            <canvas id="loggedChart"></canvas>
+                                            <div class="percentage">4</div>
+                                        </div>
                                     </div>
-                                    <h1 class="card-title">Under 18</h1>
-                                    <div class="circle-chart">
-                                        <canvas id="ageChart60"></canvas>
-                                        <div class="percentage">172</div>
+                                </div>
+
+                                <!-- Signed In Card -->
+                                <div class="col-md-3">
+                                    <div class="text-center p-4">
+                                        <h5 class="card-title">Accommodations</h5>
+                                        <div class="circle-chart">
+                                            <canvas id="signedInChart"></canvas>
+                                            <div class="percentage">3</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Engaged Card -->
+                                <div class="col-md-3">
+                                    <div class="text-center p-4">
+                                        <h5 class="card-title">Documents</h5>
+                                        <div class="circle-chart">
+                                            <canvas id="engagedChart"></canvas>
+                                            <div class="percentage">2</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -237,6 +128,54 @@
                     </div>
                 </div>
 
+{{--                <div class="row">--}}
+{{--                    <div class="col-md-3">--}}
+{{--                        <div class="card-dash p-4">--}}
+{{--                            <h5 class="card-title">Gender</h5>--}}
+{{--                            <h1 class="card-title">Male</h1>--}}
+{{--                            <div class="circle-chart">--}}
+{{--                                <canvas id="maleChart"></canvas>--}}
+{{--                                <div class="percentage">412</div>--}}
+{{--                            </div>--}}
+{{--                            <h1 class="card-title">Female</h1>--}}
+{{--                            <div class="circle-chart">--}}
+{{--                                <canvas id="femaleChart"></canvas>--}}
+{{--                                <div class="percentage">350</div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-md-6 offset-md-3">--}}
+{{--                        <div class="card-dash p-4">--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    <h5 class="card-title">Age</h5>--}}
+{{--                                    <h1 class="card-title">Under 18</h1>--}}
+{{--                                    <div class="circle-chart">--}}
+{{--                                        <canvas id="ageChart18"></canvas>--}}
+{{--                                        <div class="percentage">172</div>--}}
+{{--                                    </div>--}}
+{{--                                    <h1 class="card-title">18-25</h1>--}}
+{{--                                    <div class="circle-chart">--}}
+{{--                                        <canvas id="ageChart18-25"></canvas>--}}
+{{--                                        <div class="percentage">172</div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    <h1 class="card-title">25-60</h1>--}}
+{{--                                    <div class="circle-chart">--}}
+{{--                                        <canvas id="ageChart25-60"></canvas>--}}
+{{--                                        <div class="percentage">172</div>--}}
+{{--                                    </div>--}}
+{{--                                    <h1 class="card-title">60+</h1>--}}
+{{--                                    <div class="circle-chart">--}}
+{{--                                        <canvas id="ageChart60"></canvas>--}}
+{{--                                        <div class="percentage">172</div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </main>
         </div>
     </div>
@@ -251,17 +190,15 @@
                     datasets: [{
                         data: [data, 100 - data],
                         backgroundColor: [color, '#e0e0e0'],
-                        borderWidth: 0,
+                        borderWidth: 2,
                     }]
                 },
                 options: {
-                    cutout: '80%',
+                    cutoutPercentage: 80,
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
+                    legend: {
+                        display: false
                     }
                 }
             });
@@ -269,7 +206,7 @@
 
         createChart('reviewedChart', 80, '#000');
         createChart('loggedChart', 70, '#000');
-        createChart('singedInChart', 35, '#000');
+        createChart('signedInChart', 35, '#000');
         createChart('engagedChart', 15, '#000');
         createChart('maleChart', 70, '#000');
         createChart('femaleChart', 60, '#000');
@@ -277,8 +214,6 @@
         createChart('ageChart18-25', 40, '#000');
         createChart('ageChart25-60', 40, '#000');
         createChart('ageChart60', 40, '#000');
-
     </script>
-    </body>
 
 @endsection

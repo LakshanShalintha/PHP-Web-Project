@@ -4,7 +4,7 @@
 
     <section class="add_accommodations-section">
         <div class="container">
-            <h1>Add New Accommodation</h1>
+            <h1>Add New Documentaries</h1>
 
             <!-- Success or Error Message -->
             @if (session('success'))
@@ -29,19 +29,15 @@
                 </div>
             @endif
 
-            <form action="{{ route('storeAccommodations') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('storeDocumentaries') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" class="form-control" id="title" required>
                 </div>
                 <div class="form-group">
-                    <label for="location">Location</label>
-                    <input type="text" name="location" class="form-control" id="location" required>
-                </div>
-                <div class="form-group">
-                    <label for="price">Price</label>
-                    <input type="number" name="price" class="form-control" id="price" required>
+                    <label for="description">Description</label>
+                    <input type="text" name="description" class="form-control" id="description" required>
                 </div>
                 <div class="form-group">
                     <label for="image">Image</label>
@@ -54,4 +50,5 @@
             </form>
         </div>
     </section>
+
 @endsection

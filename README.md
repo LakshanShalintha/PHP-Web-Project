@@ -1,6 +1,12 @@
-# PHP-Web-Project
+# Travalo: Discover the Beauty of Sri Lanka
+Travalo is a comprehensive web platform designed to enhance the Sri Lankan tourism experience. Whether you're planning your next vacation or looking to explore the rich culture and breathtaking landscapes of Sri Lanka, Travalo has you covered.
 
-This project is a web application built with Laravel.
+Features
+Explore Top Travel Destinations: Discover the best places to visit across Sri Lanka, from historical landmarks to hidden gems.
+Choose Your Accommodation: Find the perfect place to stay, with options ranging from luxury hotels to cozy guesthouses.
+Dine at the Best Restaurants: Browse and select from a curated list of restaurants offering a variety of cuisines to suit every palate.
+Read Informative Articles: Access detailed articles and documents to learn more about Sri Lanka's history, culture, and tourist attractions.
+Admin Dashboard: Manage content with ease. The admin panel allows you to add, update, and delete information on restaurants, accommodations, and travel destinations.
 
 ## Installation
 
